@@ -24,7 +24,7 @@ body {
     position: fixed;
     z-index: 10;
     top: 0;
-    background: linear-gradient(to right, #36175e, #7e38da69, #36175e);
+    background: linear-gradient(to right, #1f0c36, #361463, #1f0c36);
 
     box-shadow: #823bdf75 0 5px 10px 0;
 }
@@ -69,23 +69,28 @@ body {
 
 @media only screen and (max-width: 768px) {
     .nav {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
         padding: 10px;
     }
 
     .nav ul {
-        text-align: left;
+
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
         margin-top: 10px;
     }
 
     .nav ul li {
-        margin: 10px 0;
+        margin: 5px 0;
+        padding: 5px 15px 5px 5px;
     }
 
+    .logo {
+        padding-left: 20px;
+    }
 
 }
 
@@ -116,7 +121,7 @@ body {
 }
 
 .brief h1 span {
-    background: -webkit-linear-gradient(144deg,#4158D0, #C850C0,#FFCC70);
+    background: -webkit-linear-gradient(144deg, #4158D0, #C850C0, #FFCC70);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -140,7 +145,7 @@ body {
 }
 
 .judge {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .judge h5 {
@@ -153,16 +158,44 @@ body {
     font-size: 40px;
 }
 
-.judge h2 span{
-    background: -webkit-linear-gradient(45deg,#85FFBD, #FFFB7D);
+.judge h2 span {
+    background: -webkit-linear-gradient(45deg, #85FFBD, #FFFB7D);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .brief,
+    .education {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brief h1 {
+        margin-left: 250px;
+        margin-top: 30px;
+    }
+
+    .qoute {
+        width: 600px;
+    }
+
+    .qoute p {
+        margin-top: 15px;
+        line-height: 1.2rem;
+    }
+
+    .edu h1 {
+        font-size: 30px;
+    }
+
 }
 
 /* Brief  */
 
 /* Education  */
-.education{
+.education {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,8 +204,8 @@ body {
     margin-top: 50px;
 }
 
-.edu h1{
-    font-size: 30px;
+.edu h1 {
+    font-size: 50px;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -182,15 +215,15 @@ body {
     font-family: "Noto Serif Display", serif;
     font-weight: 600;
     font-style: normal;
-    
-    
+
+
 }
 
-.edu p{
+.edu p {
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-family: "Noto Serif Display", serif;
@@ -198,36 +231,70 @@ body {
     font-style: normal;
 }
 
-.summary{
-    margin-top: 30px;
-    line-height: 1.5rem;
+.edu p span {
+    margin-left: 10px;
+}
+
+.summary {
+    margin-top: 60px;
+    line-height: 2rem;
     font-family: "Nova Mono", monospace;
     font-weight: 900;
     font-style: normal;
 
 }
 
+@media only screen and (max-width: 768px) {
+
+    .edu h1 {
+        margin-bottom: 5px;
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .edu p {
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+    }
+
+    .summary{
+        width: 610px;
+        margin-left: 70px;
+    }
+
+    .summary p{
+        width: 100%;
+        line-height: 25px;
+        letter-spacing: 0.3px;
+        font-size: 13px;
+        font-weight: normal;
+    }
+}
+
+/* Education  */
+
 
 
 
 /* swiper */
 .swiper-container {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
+
     margin: 0;
-    margin-left: 17vw;
+    margin-left: 20vw;
     margin-top: 10vw;
+    margin-bottom: 10vw;
     padding: 0;
-    height: 85vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background: transparent;
-    width: 65vw;
-    padding-top: 50px;
+    width: 60vw;
+    padding-top: 20px;
     padding-bottom: 80px;
+    border-radius: 10px;
 }
 
 .swiper-slide {
@@ -235,12 +302,28 @@ body {
     background-size: cover;
     width: 300px;
     height: 500px;
-    -webkit-box-reflect: below 1px linear-gradient(transparent,
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 10px 0 #0a0a0a;
+    -webkit-box-reflect: below 2px linear-gradient(transparent,
             transparent, #0006);
+
+
+
 }
 
 .swiper-3d {
     perspective: 480px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .swiper-container{
+        width: 650px;
+        margin: 60px 50px 90px 70px;
+        height: 610px;
+    }
+    
 }
 
 /* swiper */
@@ -436,16 +519,23 @@ ul {
 
 
 
-@media(max-width: 767px) {
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
+@media only screen and (max-width: 768px) { 
 
-@media(max-width: 574px) {
-    .footer-col {
-        width: 100%;
+    .footer-container{
+        width: 750px;
+    }
+
+    .footer-col{
+        padding: 0 22px;
+    }
+
+    .footer-col h4{
+        font-size: 14px;
+    }
+
+    .footer-col ul li a{
+        font-size: 14px;
+
     }
 }
 
