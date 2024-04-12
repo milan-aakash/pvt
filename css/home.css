@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1A0B2E;
+}
+
+/* navbar */
+.navbar {
+    font-family: "Sansita", sans-serif;
+    font-weight: 500;
+
+    font-style: normal;
+    width: 100%;
+    min-height: 9vh;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background: linear-gradient(to right, #36175e, #7e38da69, #36175e);
+
+    box-shadow: #823bdf75 0 5px 10px 0;
+}
+
+.nav {
+
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo {
+    font-size: 30px;
+    color: white;
+    letter-spacing: 0.3rem;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+.nav ul {
+    width: 100%;
+    text-align: right;
+}
+
+.nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+}
+
+.nav ul li a {
+    color: #ffffff;
+    letter-spacing: 0.3rem;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav ul {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+
+}
+
+/* navbar */
+
+/* Brief */
+.brief {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+
+    margin-top: 8vw;
+    padding: 30px;
+}
+
+.brief h1 {
+    margin-left: 10vw;
+    font-size: 25px;
+    margin-bottom: 40px;
+    font-family: "Sansita", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    font-style: normal;
+}
+
+.brief h1 span {
+    background: -webkit-linear-gradient(144deg,#4158D0, #C850C0,#FFCC70);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.qoute {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    font-family: "Sansita", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    font-style: normal;
+}
+
+.qoute img {
+    margin-left: 20px;
+
+
+}
+
+.judge {
+    margin-left: 50px;
+}
+
+.judge h5 {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.judge h2 {
+    margin-bottom: 5px;
+    font-size: 40px;
+}
+
+.judge h2 span{
+    background: -webkit-linear-gradient(45deg,#85FFBD, #FFFB7D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Brief  */
+
+/* Education  */
+.education{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.edu h1{
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1rem;
+    color: white;
+    margin-bottom: 5px;
+    font-family: "Noto Serif Display", serif;
+    font-weight: 600;
+    font-style: normal;
+    
+    
+}
+
+.edu p{
+    color: white;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Noto Serif Display", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.summary{
+    margin-top: 30px;
+    line-height: 1.5rem;
+    font-family: "Nova Mono", monospace;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+
+
+
+/* swiper */
+.swiper-container {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    margin-left: 17vw;
+    margin-top: 10vw;
+    padding: 0;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: transparent;
+    width: 65vw;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 500px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,
+            transparent, #0006);
+}
+
+.swiper-3d {
+    perspective: 480px;
+}
+
+/* swiper */
+
+
+/* footer */
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    position: relative;
+    font-family: "Nova Mono", monospace;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 1px 2px rgb(254, 253, 253);
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-family: "Noto Serif Display", serif;
+
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 16px;
+    text-transform: capitalize;
+
+    text-decoration: none;
+
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+
+
+.footer-col .social-links .facebook:hover {
+    color: #3B5998;
+    ;
+    background-color: #000;
+}
+
+.footer-col .social-links .google:hover {
+    color: #00B6F1;
+    background-color: #000;
+}
+
+.footer-col .social-links .instagram:hover {
+    color: #ee2a7b;
+    background: #000;
+}
+
+.footer-col .social-links .linkedin:hover {
+    color: #04669A;
+    background-color: #000;
+}
+
+
+
+/* Define the glow effect for each social link */
+@keyframes glowing-facebook {
+    0% {
+        box-shadow: 0 0 10px #fff;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #3b5998;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #fff;
+    }
+}
+
+@keyframes glowing-google {
+    0% {
+        box-shadow: 0 0 10px #ff0000;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #fbff1b;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #108800;
+    }
+}
+
+@keyframes glowing-instagram {
+    0% {
+        box-shadow: 0 0 10px #fdf497;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #d6249f;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #285AEB;
+    }
+}
+
+@keyframes glowing-linkedin {
+    0% {
+        box-shadow: 0 0 10px #fff;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #0077b5;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #fff;
+    }
+}
+
+
+
+/* Apply specific glow animations on hover for each social link */
+.glow.facebook:hover {
+    animation: glowing-facebook 1.5s infinite;
+}
+
+.glow.google:hover {
+    animation: glowing-google 1.5s infinite;
+}
+
+.glow.instagram:hover {
+    animation: glowing-instagram 1.5s infinite;
+}
+
+.glow.linkedin:hover {
+    animation: glowing-linkedin 1.5s infinite;
+}
+
+
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/* footer */
