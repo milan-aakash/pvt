@@ -25,343 +25,11 @@ if (isset($_POST['logout'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
-
-<style>
-    /* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap'); */
-    @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* navbar */
-    .navbar {
-        font-family: "Nova Mono", monospace;
-        font-weight: 900;
-        font-style: normal;
-        width: 100%;
-        min-height: 10vh;
-        background: #121213;
-        color: #525252;
-    }
-
-    .nav {
-        background: #1a1a1a;
-        width: 100%;
-        padding: 10px 10%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-    }
-
-    .logo {
-        font-size: 30px;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .user-pic {
-        width: 40px;
-        border-radius: 50%;
-        cursor: pointer;
-        margin-left: 30px;
-    }
-
-    .nav ul {
-        width: 100%;
-        text-align: right;
-    }
-
-    .nav ul li {
-        display: inline-block;
-        list-style: none;
-        margin: 10px 20px;
-    }
-
-    .nav ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-
-    @media only screen and (max-width: 768px) {
-        .nav {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 10px;
-        }
-
-        .nav ul {
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-top: 10px;
-        }
-
-        .nav ul li {
-            margin: 10px 0;
-        }
-
-        .user-pic {
-            margin-left: 0;
-            margin-top: 10px;
-        }
-    }
-
-    /* navbar */
-
-
-
-    /* swiper */
-    .swiper-container {
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        margin-top: 10vw;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        background: #111;
-        width: 100%;
-        padding-top: 50px;
-        padding-bottom: 80px;
-    }
-
-    .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 300px;
-        height: 500px;
-        -webkit-box-reflect: below 1px linear-gradient(transparent,
-                transparent, #0006);
-    }
-
-    .swiper-3d {
-        perspective: 500px;
-    }
-
-    /* swiper */
-
-
-    /* footer */
-    .footer-container {
-        max-width: 1170px;
-        margin: auto;
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    .footer {
-        background-color: #24262b;
-        padding: 70px 0;
-    }
-
-    .footer-col {
-        width: 25%;
-        padding: 0 15px;
-    }
-
-    .footer-col h4 {
-        font-size: 18px;
-        color: #ffffff;
-        text-transform: capitalize;
-        margin-bottom: 35px;
-        position: relative;
-        font-family: "Nova Mono", monospace;
-        font-weight: 900;
-        font-style: normal;
-    }
-
-    .footer-col h4::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        background-color: #e91e63;
-        height: 2px;
-        box-sizing: border-box;
-        width: 50px;
-    }
-
-    .footer-col ul li:not(:last-child) {
-        margin-bottom: 10px;
-    }
-
-    .footer-col ul li a {
-        font-family: "Noto Serif Display", serif;
-
-        font-weight: 400;
-        font-style: normal;
-
-        font-size: 16px;
-        text-transform: capitalize;
-
-        text-decoration: none;
-
-        color: #bbbbbb;
-        display: block;
-        transition: all 0.3s ease;
-    }
-
-    .footer-col ul li a:hover {
-        color: #ffffff;
-        padding-left: 8px;
-    }
-
-    .footer-col .social-links a {
-        display: inline-block;
-        height: 40px;
-        width: 40px;
-        background-color: rgba(255, 255, 255, 0.2);
-        margin: 0 10px 10px 0;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 50%;
-        color: #ffffff;
-        transition: all 0.5s ease;
-    }
-
-    /* .footer-col .social-links a:hover {
-color: #24262b;
-background-color: #5e0505;
-} */
-
-    .footer-col .social-links .facebook:hover {
-        color: #3B5998;
-        ;
-        background-color: #000;
-    }
-
-    .footer-col .social-links .google:hover {
-        color: #00B6F1;
-        background-color: #000;
-    }
-
-    .footer-col .social-links .instagram:hover {
-        color: #ee2a7b;
-        background: #000;
-    }
-
-    .footer-col .social-links .linkedin:hover {
-        color: #04669A;
-        background-color: #000;
-    }
-
-
-
-    /* Define the glow effect for each social link */
-    @keyframes glowing-facebook {
-        0% {
-            box-shadow: 0 0 10px #fff;
-        }
-
-        50% {
-            box-shadow: 0 0 20px #3b5998;
-        }
-
-        100% {
-            box-shadow: 0 0 10px #fff;
-        }
-    }
-
-    @keyframes glowing-google {
-        0% {
-            box-shadow: 0 0 10px #ff0000;
-        }
-
-        50% {
-            box-shadow: 0 0 20px #fbff1b;
-        }
-
-        100% {
-            box-shadow: 0 0 10px #108800;
-        }
-    }
-
-    @keyframes glowing-instagram {
-        0% {
-            box-shadow: 0 0 10px #fdf497;
-        }
-
-        50% {
-            box-shadow: 0 0 20px #d6249f;
-        }
-
-        100% {
-            box-shadow: 0 0 10px #285AEB;
-        }
-    }
-
-    @keyframes glowing-linkedin {
-        0% {
-            box-shadow: 0 0 10px #fff;
-        }
-
-        50% {
-            box-shadow: 0 0 20px #0077b5;
-        }
-
-        100% {
-            box-shadow: 0 0 10px #fff;
-        }
-    }
-
-
-
-    /* Apply specific glow animations on hover for each social link */
-    .glow.facebook:hover {
-        animation: glowing-facebook 1.5s infinite;
-    }
-
-    .glow.google:hover {
-        animation: glowing-google 1.5s infinite;
-    }
-
-    .glow.instagram:hover {
-        animation: glowing-instagram 1.5s infinite;
-    }
-
-    .glow.linkedin:hover {
-        animation: glowing-linkedin 1.5s infinite;
-    }
-
-
-
-    /*responsive*/
-    @media(max-width: 767px) {
-        .footer-col {
-            width: 50%;
-            margin-bottom: 30px;
-        }
-    }
-
-    @media(max-width: 574px) {
-        .footer-col {
-            width: 100%;
-        }
-    }
-
-    /* footer */
-</style>
 
 <body>
 
@@ -374,12 +42,40 @@ background-color: #5e0505;
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-            <img class="user-pic" src="https://i.pinimg.com/236x/a4/e8/8f/a4e88fc30e5e5cf7ce63608defec0d6d.jpg"
-                alt="profile img">
+
 
         </div>
     </div>
 
+    <div class="brief">
+        <h1>
+            Hello! I Am <span> Aakash Singh</span>
+        </h1>
+
+        <div class="qoute">
+            <img src="me.png" alt="">
+            <div class="judge">
+                <h5>A Developer Who</h5>
+                <h2>
+                    Judges a book <br> by it's <span>Cover</span>...
+                </h2>
+                <p>Because if the cover does not impress you what else can?</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="education">
+        <div class="edu">
+            <h1>I'm a Web Developer</h1>
+            <p>Currently I'm a Student of Maharaja Agrasen College, <span>University of Delhi</span></p>
+        </div>
+        <div class="summary">
+            <p>A self taught Web Developer. Pursuing BA. Program (Computer Science and History) <br>
+                I am skilled in creating responsive, user-friendly and interactive websites. <br>
+                A fervent commitment to staying updated with emerging web trends and technologies.
+            </p>
+        </div>
     </div>
 
     <div class="swiper-container">
@@ -458,7 +154,7 @@ background-color: #5e0505;
     </footer>
 
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/e46c3fe067.js" crossorigin="anonymous"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
