@@ -68,10 +68,10 @@ if (isset($_POST['logout'])) {
     <div class="education">
         <div class="edu">
             <h1>I'm a Web Developer</h1>
-            <p>Currently I'm a Student of Maharaja Agrasen College, <span>University of Delhi</span></p>
+            <p>Currently I'm a Student at Maharaja Agrasen College, <span>University of Delhi</span></p>
         </div>
         <div class="summary">
-            <p>A self taught Web Developer. Pursuing BA. Program (Computer Science and History) <br>
+            <p>A self taught Web Developer. Pursuing BA Program (Computer Science and History) <br>
                 I am skilled in creating responsive, user-friendly and interactive websites. <br>
                 A fervent commitment to staying updated with emerging web trends and technologies.
             </p>
